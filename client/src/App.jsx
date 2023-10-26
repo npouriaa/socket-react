@@ -32,20 +32,26 @@ const App = () => {
 
   return (
     <div className="App">
-      <input
-        placeholder="Room Number..."
-        onChange={(event) => {
-          setRoom(event.target.value);
-        }}
-      />
-      <button onClick={joinRoom}> Join Room</button>
-      <input
-        placeholder="Message..."
-        onChange={(event) => {
-          setMessage(event.target.value);
-        }}
-      />
-      <button onClick={sendMessage}> Send Message</button>
+      <div className="inputs-con">
+        <div className="">
+          <input
+            placeholder="Room Number..."
+            onChange={(event) => {
+              setRoom(event.target.value);
+            }}
+          />
+          <button onClick={joinRoom}> Join Room</button>
+        </div>
+        <div className="">
+          <input
+            placeholder="Message..."
+            onChange={(event) => {
+              setMessage(event.target.value);
+            }}
+          />
+          <button onClick={sendMessage}> Send Message</button>
+        </div>
+      </div>
       <h1> Message:</h1>
       {messageReceived}
     </div>
